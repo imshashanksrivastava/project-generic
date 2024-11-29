@@ -1,0 +1,373 @@
+/* General Reset */
+body, h1, h2, p, ul, li, a, button, input, textarea {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.6;
+  background: linear-gradient(135deg, #1dbf73, #0d084d);
+  color: #333;
+  padding-top: 80px; /* Prevent content from hiding under fixed header */
+}
+
+/* Header */
+header {
+  background-color: #0d084d;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  padding: 10px 0;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+header .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+header .logo {
+  color: white;
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+header nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+header nav a:hover {
+  color: #1dbf73;
+}
+
+/* Scrolled Header */
+header.scrolled {
+  background-color: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+header.scrolled .logo {
+  color: #0d084d;
+}
+
+header.scrolled nav a {
+  color: #0d084d;
+}
+
+/* Main Section */
+main {
+  padding: 2rem 1rem;
+}
+
+h2 {
+  text-align: center;
+  color: #444;
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+}
+
+/* Create Profile Form */
+.create-profile-form {
+  max-width: 600px;
+  margin: 0 auto;
+  background: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.create-profile-form label {
+  display: block;
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  color: #555;
+}
+
+.create-profile-form input,
+.create-profile-form textarea {
+  width: 100%;
+  padding: 0.8rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+}
+
+.create-profile-form button {
+  width: 100%;
+  padding: 0.8rem;
+  font-size: 1.2rem;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.create-profile-form button:hover {
+  background-color: #0056b3;
+  transform: scale(1.02);
+}
+
+/* Footer */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+  margin-top: 2rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  header .logo {
+    font-size: 1.5rem;
+  }
+
+  header nav ul {
+    gap: 15px;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .create-profile-form {
+    padding: 1.5rem;
+  }
+
+  .create-profile-form button {
+    font-size: 1rem;
+  }
+}
+
+
+
+
+/* Contact Section */
+#contact {
+  padding: 40px 20px;
+  background-color: #f1fdf7; /* Light background color */
+  color: #333; /* Dark text for contrast */
+  text-align: center;
+}
+
+#contact h2 {
+  font-size: 2.5rem; /* Increased heading size for emphasis */
+  margin-bottom: 20px;
+  font-weight: 600;
+  color: #0d084d; /* Dark text color */
+}
+
+form {
+  max-width: 600px; /* Limit form width for better readability */
+  margin: 0 auto;
+  background-color: #fff; /* White background for form */
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  font-size: 1rem;
+  color: #333;
+  background-color: #fafafa;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+form input:focus,
+form textarea:focus {
+  border-color: #1dbf73;
+  outline: none;
+  box-shadow: 0 0 8px rgba(29, 191, 115, 0.2);
+}
+
+form button {
+  background-color: #1dbf73; /* Bright green button */
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  width: 100%; /* Full-width button for emphasis */
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+form button:hover {
+  background-color: #16a457;
+  transform: scale(1.05); /* Slight hover effect for button */
+}
+
+form button:active {
+  transform: scale(1); /* Active button effect */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  #contact {
+    padding: 30px 15px;
+  }
+
+  #contact h2 {
+    font-size: 2rem;
+  }
+
+  form {
+    padding: 25px 15px;
+  }
+
+  form input,
+  form textarea {
+    padding: 10px;
+  }
+
+  form button {
+    font-size: 1rem;
+  }
+}
+/* About Section */
+.about {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  background-color: #f1fdf7; /* Light background like features section */
+  padding: 100px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.about .container {
+  padding: 0;
+  margin: 0;
+  width: 1400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  font-weight: 500;
+  color: #333; /* Dark text color */
+}
+
+.about p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: gray;
+  text-align: center;
+  margin: 0 auto;
+  font-weight: 300;
+}
+
+.about img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-top: 20px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.about .cta-button {
+  margin-top: 30px;
+  background: #1dbf73;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.about .cta-button:hover {
+  background: #0d084d;
+}
+
+
+#random, #mission, #home{
+  height: 70px;
+}
+
+
+
+/* Expertise Section Styling */
+.expertise-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.expertise-option {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.expertise-option input[type="checkbox"] {
+  accent-color: #1dbf73; /* Change checkbox color */
+  width: 18px;
+  height: 18px;
+}
+
+.expertise-option label {
+  font-size: 1rem;
+  color: #555;
+  cursor: pointer;
+}
+
+/* Styling for Other Expertise input field */
+#other-expertise-container {
+  display: none; /* Hidden by default */
+  margin-top: 1rem;
+  transition: all 0.3s ease;
+}
+
+#other-expertise-container input {
+  width: 100%;
+  padding: 0.8rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Hidden class for transitions */
+.hidden {
+  display: none;
+}
+
+/* Show the other expertise input when required */
+#other-expertise-container.show {
+  display: block;
+}

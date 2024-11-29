@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create Profile</title>
+    <link rel="stylesheet" href="create-profile.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="container">
+        <h1 class="logo">Freelancer Portfolio<span class="dot">.</span></h1>
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#about">About</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+      <section class="create-profile-form">
+        <h2>Create Your Profile</h2>
+        <form id="profileForm">
+          <label for="name">Name:</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            required
+            placeholder="Enter your full name"
+          />
+
+          <label for="email">Email:</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            required
+            placeholder="Enter your email address"
+          />
+
+          <label for="bio">Bio:</label>
+          <textarea
+            id="bio"
+            name="bio"
+            rows="4"
+            required
+            placeholder="Write a short bio about yourself"
+          ></textarea>
+
+          <label for="expertise">Expertise:</label>
+          <div class="expertise-container">
+            <div class="expertise-option">
+              <input
+                type="checkbox"
+                id="web-dev"
+                name="expertise"
+                value="Web Development"
+              />
+              <label for="web-dev">Web Development</label>
+            </div>
+            <div class="expertise-option">
+              <input
+                type="checkbox"
+                id="data-science"
+                name="expertise"
+                value="Data Science"
+              />
+              <label for="data-science">Data Science</label>
+            </div>
+            <div class="expertise-option">
+              <input
+                type="checkbox"
+                id="design"
+                name="expertise"
+                value="Design"
+              />
+              <label for="design">Design</label>
+            </div>
+            <div class="expertise-option">
+              <input
+                type="checkbox"
+                id="marketing"
+                name="expertise"
+                value="Marketing"
+              />
+              <label for="marketing">Marketing</label>
+            </div>
+            <div class="expertise-option">
+              <input
+                type="checkbox"
+                id="others"
+                name="expertise"
+                value="Others"
+              />
+              <label for="others">Others</label>
+            </div>
+          </div>
+
+          <div id="other-expertise-container" class="hidden">
+            <label for="other-expertise">Specify Other Expertise:</label>
+            <input
+              type="text"
+              id="other-expertise"
+              name="other-expertise"
+              placeholder="Enter other expertise"
+            />
+          </div>
+
+          <label for="resume">Resume Link:</label>
+          <input
+            type="url"
+            id="resume"
+            name="resume"
+            required
+            placeholder="https://example.com"
+          />
+
+          <button type="submit">Create Profile</button>
+        </form>
+      </section>
+    </main>
+    <div class="random" id="random"></div>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+      <h2>Contact Me</h2>
+      <form id="contact-form">
+        <input type="text" id="name" placeholder="Your Name" required />
+        <input type="email" id="email" placeholder="Your Email" required />
+        <textarea id="message" placeholder="Your Message" required></textarea>
+        <button type="submit">Send</button>
+      </form>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+      <div class="container">
+        <h2>About Us</h2>
+        <p>
+          At Freelancer Portfolio, we connect talented professionals with
+          clients looking for quality work. Whether you're a designer,
+          developer, or marketing expert, our platform empowers you to showcase
+          your skills, build your network, and take on exciting projects.
+        </p>
+        <p>
+          Our mission is to simplify the freelancing process, offering tools for
+          freelancers to thrive in their careers. We prioritize quality,
+          transparency, and seamless collaboration.
+        </p>
+        <p>
+          Join us today and explore opportunities that match your talent and
+          ambition.
+        </p>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <p>© 2024 Portfolio App. All rights reserved.</p>
+    </footer>
+
+    <script src="create-profile.js"></script>
+  </body>
+</html>

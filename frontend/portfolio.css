@@ -1,0 +1,399 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f9fafb;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+  background-color: #2c3e50;
+  color: white;
+  padding: 20px 0;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+header .logo {
+  font-size: 2rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+header nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  text-transform: uppercase;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+header nav a:hover {
+  color: #1dbf73;
+  transform: translateY(-2px);
+}
+
+/* Hero Section */
+#hero {
+  background: linear-gradient(to bottom, #0d084d, #1dbf73);
+  color: white;
+  padding: 100px 20px;
+  text-align: center;
+  background-size: cover;
+}
+
+#hero h2 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+#hero p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.hero-title, .hero-name {
+  text-transform: uppercase;
+}
+
+.cta-btn {
+  background-color: #1dbf73;
+  color: white;
+  padding: 15px 30px;
+  text-decoration: none;
+  border-radius: 30px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.cta-btn:hover {
+  background-color: #16a457;
+  transform: translateY(-3px);
+}
+
+/* About Section */
+#about {
+  padding: 60px 20px;
+  text-align: center;
+  background-color: #ffffff;
+  border-top: 4px solid #1dbf73;
+}
+
+#about h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+
+#about p {
+  font-size: 1.1rem;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Portfolio Section */
+#portfolio {
+  background-color: #fff;
+  padding: 60px 20px;
+}
+
+#portfolio h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.portfolio-item {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.portfolio-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.portfolio-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.portfolio-item img:hover {
+  transform: scale(1.05);
+}
+
+.portfolio-item h3 {
+  font-size: 1.5rem;
+  margin-top: 20px;
+  font-weight: 600;
+}
+
+.portfolio-item p {
+  font-size: 1rem;
+  margin: 10px 0;
+  line-height: 1.5;
+}
+
+.view-btn {
+  background-color: #1dbf73;
+  color: white;
+  padding: 12px 25px;
+  text-decoration: none;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.view-btn:hover {
+  background-color: #16a457;
+  transform: translateY(-3px);
+}
+
+/* Contact Section */
+#contact {
+  padding: 60px 20px;
+  background-color: #2c3e50;
+  color: white;
+}
+
+#contact h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: bold;
+}
+
+form {
+  max-width: 700px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-size: 1rem;
+}
+
+form input:focus,
+form textarea:focus {
+  border-color: #1dbf73;
+  outline: none;
+}
+
+form button {
+  background-color: #1dbf73;
+  color: white;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 30px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+form button:hover {
+  background-color: #16a457;
+  transform: translateY(-3px);
+}
+
+/* Footer */
+footer {
+  background-color: #34495e;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9rem;
+}
+
+footer p {
+  margin: 0;
+}
+
+
+
+
+
+/* Testimonials Section */
+#testimonials {
+  background-color: #f9fafb;
+  padding: 60px 20px;
+  border-top: 4px solid #1dbf73;
+}
+
+#testimonials h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #333;
+}
+
+#testimonials p {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 40px;
+}
+
+.testimonial-carousel {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.testimonial {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonial:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.testimonial p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+
+.testimonial strong {
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.testimonial-rating {
+  font-size: 1.2rem;
+  color: #f1c40f;
+  margin-top: 10px;
+}
+
+/* Leave a Testimonial Form */
+#add-testimonial {
+  background-color: #f0f4f7;
+  padding: 60px 20px;
+}
+
+#add-testimonial h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #333;
+}
+
+#add-testimonial form {
+  max-width: 700px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#add-testimonial form label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  font-size: 1.1rem;
+}
+
+#add-testimonial form input,
+#add-testimonial form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+#add-testimonial form input:focus,
+#add-testimonial form textarea:focus {
+  border-color: #1dbf73;
+  outline: none;
+}
+
+#add-testimonial form button {
+  display: block;
+  width: 100%;
+  padding: 15px;
+  background-color: #1dbf73;
+  color: white;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+#add-testimonial form button:hover {
+  background-color: #16a457;
+  transform: translateY(-2px);
+}

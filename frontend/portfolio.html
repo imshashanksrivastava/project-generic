@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="portfolio.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="container">
+        <h1 class="logo">My Portfolio</h1>
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#portfolio">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#about">About</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <section id="hero">
+      <div class="container">
+        <h2 class="hero-title">Welcome to My Portfolio</h2>
+        <h3 class="hero-name"><span id="profile-name"></span></h3>
+        <p id="expertise-text" class="hero-expertise">Loading expertise...</p>
+        <div id="avg-rating-hero"></div>
+
+        <!-- Add this line for the rating -->
+        <p class="hero-description">
+          Explore my work and see how I can contribute to your next project.
+        </p>
+
+        <a href="#portfolio" class="cta-btn">View My Work</a>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+      <div class="container">
+        <h2>About Me</h2>
+        <p id="about-bio">Loading bio...</p>
+        <p id="about-email">Email: Loading...</p>
+      </div>
+    </section>
+
+    <main>
+      <div id="portfolio-container"></div>
+    </main>
+    <!-- Reviews -->
+    <section id="add-testimonial">
+      <div class="container">
+        <h2>Leave a Testimonial</h2>
+        <form id="testimonialForm">
+          <input type="hidden" id="profileEmail" value="" />
+          <label for="author">Your Name:</label>
+          <input type="text" id="author" placeholder="Your Name" required />
+
+          <label for="rating">Rating (1-5):</label>
+          <input type="number" id="rating" min="1" max="5" required />
+
+          <label for="content">Testimonial:</label>
+          <textarea
+            id="content"
+            rows="4"
+            placeholder="Your Testimonial"
+            required
+          ></textarea>
+
+          <button type="submit">Submit Testimonial</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+      <div class="container">
+        <h2>Contact Me</h2>
+        <form id="contactForm" action="/contact" method="POST">
+          <label for="name">Name</label>
+          <input
+            type="text"
+            id="name"
+            placeholder="Your Name"
+            name="name"
+            required
+          />
+
+          <label for="email">Email</label>
+          <input
+            type="email"
+            id="email"
+            placeholder="Your Email"
+            name="email"
+            required
+          />
+
+          <label for="message">Message</label>
+          <textarea
+            id="message"
+            name="message"
+            rows="4"
+            placeholder="Your Message"
+            required
+          ></textarea>
+
+          <button type="submit">Send Message</button>
+        </form>
+      </div>
+    </section>
+
+    <footer>
+      <p>© 2024 Portfolio App. All rights reserved.</p>
+    </footer>
+
+    <script src="portfolio.js"></script>
+  </body>
+</html>

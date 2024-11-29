@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Freelancer Portfolio</title>
+    <link rel="stylesheet" href="home.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="container">
+        <h1 class="logo">Freelancer Portfolio<span class="dot">.</span></h1>
+        <nav>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#mission">Mission</a></li>
+            <li><a href="#random">Contact</a></li>
+            <li><a href="#about">About</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+      <div class="container">
+        <h2>Welcome to Freelancer Portfolio</h2>
+        <p>Your one-stop solution for creative and professional services.</p>
+        <div class="auth-buttons">
+          <button id="login-btn">Login</button>
+          <button id="register-btn">Register</button>
+        </div>
+      </div>
+      <div>
+        <img
+          src="img/lady.png"
+          alt=""
+          srcset=""
+          style="width: 75%; margin-top: 50px"
+        />
+      </div>
+    </section>
+
+    <!-- Login Modal -->
+    <div id="login-modal" class="modal">
+      <div class="modal-content">
+        <span class="close-btn" id="close-login">&times;</span>
+        <h3>Login</h3>
+        <form id="login-form">
+          <label for="login-email">Email:</label>
+          <input type="email" id="login-email" required />
+
+          <label for="login-password">Password:</label>
+          <input type="password" id="login-password" required />
+
+          <button type="submit">Login</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Register Modal -->
+    <div id="register-modal" class="modal">
+      <div class="modal-content">
+        <span class="close-btn" id="close-register">&times;</span>
+        <h3>Register</h3>
+        <form id="register-form">
+          <label for="register-name">Full Name:</label>
+          <input type="text" id="register-name" required />
+
+          <label for="register-email">Email:</label>
+          <input type="email" id="register-email" required />
+
+          <label for="register-password">Password:</label>
+          <input type="password" id="register-password" required />
+
+          <label for="register-visitor">
+            Visitor?
+            <input type="checkbox" id="register-visitor" name="visitor" />
+          </label>
+
+          <button type="submit">Register</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="trustedBy">
+      <div class="container">
+        <span>Trusted by:</span
+        ><img
+          src="https://fiverr-res.cloudinary.com/npm-assets/@fiverr/logged_out_homepage_perseus/apps/facebook2x.188a797.png"
+          alt=""
+        /><img
+          src="https://fiverr-res.cloudinary.com/npm-assets/@fiverr/logged_out_homepage_perseus/apps/google2x.06d74c8.png"
+          alt=""
+        /><img
+          src="https://fiverr-res.cloudinary.com/npm-assets/@fiverr/logged_out_homepage_perseus/apps/netflix2x.887e47e.png"
+          alt=""
+        /><img
+          src="https://fiverr-res.cloudinary.com/npm-assets/@fiverr/logged_out_homepage_perseus/apps/pandg2x.6dc32e4.png"
+          alt=""
+        /><img
+          src="https://fiverr-res.cloudinary.com/npm-assets/@fiverr/logged_out_homepage_perseus/apps/paypal2x.22728be.png"
+          alt=""
+        />
+      </div>
+    </div>
+    <div class="random" id="mission"></div>
+    <div class="features">
+      <div class="container">
+        <div class="item">
+          <h1>A whole world of freelance talent at your fingertips</h1>
+          <div class="title">
+            <img src="./img/check.png" alt="" />The best for every budget
+          </div>
+          <p>
+            Find high-quality services at every price point. No hourly rates,
+            just project-based pricing.
+          </p>
+          <div class="title">
+            <img src="./img/check.png" alt="" />Quality work done quickly
+          </div>
+          <p>
+            Find the right freelancer to begin working on your project within
+            minutes.
+          </p>
+          <div class="title">
+            <img src="./img/check.png" alt="" />Protected payments, every time
+          </div>
+          <p>
+            Always know what you'll pay upfront. Your payment isn't released
+            until you approve the work.
+          </p>
+          <div class="title">
+            <img src="./img/check.png" alt="" />24/7 support
+          </div>
+          <p>
+            Find high-quality services at every price point. No hourly rates,
+            just project-based pricing.
+          </p>
+        </div>
+        <div class="item"></div>
+      </div>
+    </div>
+    <div class="random" id="random"></div>
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+      <h2>Contact Me</h2>
+      <form id="contact-form">
+        <input type="text" id="name" placeholder="Your Name" required />
+        <input type="email" id="email" placeholder="Your Email" required />
+        <textarea id="message" placeholder="Your Message" required></textarea>
+        <button type="submit">Send</button>
+      </form>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+      <div class="container">
+        <h2>About Us</h2>
+        <p>
+          At Freelancer Portfolio, we connect talented professionals with
+          clients looking for quality work. Whether you're a designer,
+          developer, or marketing expert, our platform empowers you to showcase
+          your skills, build your network, and take on exciting projects.
+        </p>
+        <p>
+          Our mission is to simplify the freelancing process, offering tools for
+          freelancers to thrive in their careers. We prioritize quality,
+          transparency, and seamless collaboration.
+        </p>
+        <p>
+          Join us today and explore opportunities that match your talent and
+          ambition.
+        </p>
+      </div>
+    </section>
+    <!-- Footer -->
+    <footer>
+      <div class="bottom">
+        <div class="left">
+          <h2>Freelancer</h2>
+        </div>
+        <div>
+          <span>© Freelancer Portfolio International Ltd. 2023</span>
+        </div>
+        <div class="right">
+          <div class="social">
+            <img src="./img/twitter.png" alt="" /><img
+              src="./img/facebook.png"
+              alt=""
+            /><img src="./img/linkedin.png" alt="" /><img
+              src="./img/pinterest.png"
+              alt=""
+            /><img src="./img/instagram.png" alt="" />
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="home.js"></script>
+  </body>
+</html>

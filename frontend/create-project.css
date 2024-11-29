@@ -1,0 +1,205 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  width: 100%;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(135deg, #1dbf73, #0d084d);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  line-height: 1.7;
+  color: #333;
+}
+
+/* Header */
+header {
+  background-color: #0d084d;
+  padding: 20px 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+header h1 {
+  color: white;
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+header nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+header nav a:hover {
+  color: #1dbf73;
+  transform: translateY(-3px);
+}
+
+/* Main Content */
+main {
+  margin-top: 80px; /* Space for the fixed header */
+  flex-grow: 1;
+  padding: 20px;
+  overflow-x: hidden;
+}
+
+/* Portfolio Form */
+.portfolio-form {
+  background: #fff;
+  padding: 25px;
+  margin: 20px auto;
+  max-width: 900px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+form {
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+form label {
+  display: block;
+  margin: 12px 0 6px;
+  font-size: 1.1rem;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  font-size: 1rem;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+form input:focus,
+form textarea:focus {
+  border-color: #1dbf73;
+  outline: none;
+  box-shadow: 0 0 10px rgba(29, 191, 115, 0.2);
+}
+
+form button {
+  background-color: #007bff;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+form button:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+}
+
+/* Contact Section */
+#contact {
+  padding: 60px 20px;
+  background-color: #f1fdf7;
+  text-align: center;
+}
+
+#contact h2 {
+  font-size: 2.6rem;
+  margin-bottom: 30px;
+  font-weight: 600;
+  color: #0d084d;
+}
+
+#contact form {
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border-radius: 6px;
+  border: 1px solid #ddd;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+form button {
+  background-color: #1dbf73;
+  color: white;
+  padding: 14px 24px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #159f61;
+  transform: translateY(-3px);
+}
+
+/* About Section */
+#about {
+  background-color: #fff;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+#about p {
+  font-size: 1.1rem;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+/* Footer */
+footer {
+  background-color: #0d084d;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}

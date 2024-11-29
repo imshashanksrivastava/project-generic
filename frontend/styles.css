@@ -1,0 +1,508 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  width: 100%;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #1dbf73, #0d084d);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensure the body takes at least the full viewport height */
+  line-height: 1.6;
+  color: #333;
+}
+
+
+/* Header */
+header {
+  background-color: #0d084d;
+  padding: 20px 0;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
+
+}
+
+header .logo {
+  color: white;
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+}
+
+header nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+header nav a:hover {
+  color: #1dbf73;
+}
+
+/* Footer */
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  margin-top: auto; /* Push the footer to the bottom */
+  width: 100%;
+  z-index: 1000;
+}
+
+/* Main Content */
+main {
+  margin-top: 60px; /* Space for the fixed header */
+  flex-grow: 1;
+  padding: 20px;
+  overflow-x: hidden; /* Prevent horizontal scrolling inside main */
+}
+
+main .head-list {
+  color: white;
+  padding: 10px 0;
+  text-align: center;
+}
+
+/* Profile and Portfolio Items */
+.profile-item, .portfolio-item {
+  background: #fff;
+  padding: 15px;
+  margin: 10px auto;
+  max-width: 800px; /* Constrain the width */
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-item:hover, .portfolio-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.profile-item a, .portfolio-item a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.profile-item a:hover, .portfolio-item a:hover {
+  text-decoration: underline;
+}
+
+/* Form Styles */
+form {
+  background: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  max-width: 800px; /* Constrain the width */
+  margin: 0 auto; /* Center the form */
+}
+
+form label {
+  display: block;
+  margin: 10px 0 5px;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 8px;
+  margin: 5px 0;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+}
+
+form button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #0056b3;
+}
+
+
+
+
+
+/* Default Header */
+header {
+  background-color: #0d084d;
+  padding: 20px 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Scrolled Header */
+header.scrolled {
+  background-color: white;
+}
+
+header.scrolled .logo {
+  color: #0d084d;
+}
+
+header.scrolled nav a {
+  color: #0d084d;
+}
+
+header.scrolled nav a:hover {
+  color: #1dbf73; /* Optional hover effect */
+}
+
+
+
+/* Match logout-btn to nav links */
+#logout-btn {
+  background: none; /* Remove button background */
+  border: none; /* Remove border */
+  color: white; /* Match link text color */
+  font-weight: 500; /* Match font weight */
+  font-size: 1rem; /* Match font size of links */
+  cursor: pointer; /* Make it behave like a link */
+  text-decoration: none; /* Remove underline */
+  transition: color 0.3s ease; /* Smooth color transition on hover */
+  padding: 0; /* Remove extra padding */
+}
+
+#logout-btn:hover {
+  color: #1dbf73; /* Match link hover color */
+}
+
+
+
+
+
+
+
+
+
+
+
+/* Profiles Container */
+#profiles {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center; /* Center align the grid items */
+  padding: 20px;
+}
+
+/* Profile Items */
+.profile-item {
+  background: #fff;
+  padding: 15px;
+  width: 250px; /* Set a fixed width for the blocks */
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center; /* Center-align content */
+}
+
+.profile-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.profile-item h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.profile-item p {
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+}
+
+.profile-item a {
+  color: #007bff;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.profile-item a:hover {
+  text-decoration: underline;
+}
+
+
+
+
+
+
+
+
+
+.search-filter {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+#search-bar {
+  padding: 10px;
+  font-size: 1rem;
+  width: 50%;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+#filter-expertise {
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+
+
+
+/* Portfolio Button */
+.view-portfolio-btn {
+  background-color: #1dbf73;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-align: center;
+  display: block;
+  width: 100%;
+  margin-top: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.view-portfolio-btn:hover {
+  background-color: #16a457;
+}
+
+/* Portfolio Details */
+.portfolio-details {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.portfolio-details h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.portfolio-details p {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.portfolio-details ul {
+  list-style: none;
+  padding: 0;
+}
+
+.portfolio-details li {
+  margin-bottom: 15px;
+}
+
+.portfolio-details a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.portfolio-details a:hover {
+  text-decoration: underline;
+}
+
+
+
+
+
+/* Contact Section */
+#contact {
+  padding: 40px 20px;
+  background-color: #f1fdf7; /* Light background color */
+  color: #333; /* Dark text for contrast */
+  text-align: center;
+}
+
+#contact h2 {
+  font-size: 2.5rem; /* Increased heading size for emphasis */
+  margin-bottom: 20px;
+  font-weight: 600;
+  color: #0d084d; /* Dark text color */
+}
+
+form {
+  max-width: 600px; /* Limit form width for better readability */
+  margin: 0 auto;
+  background-color: #fff; /* White background for form */
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  font-size: 1rem;
+  color: #333;
+  background-color: #fafafa;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+form input:focus,
+form textarea:focus {
+  border-color: #1dbf73;
+  outline: none;
+  box-shadow: 0 0 8px rgba(29, 191, 115, 0.2);
+}
+
+form button {
+  background-color: #1dbf73; /* Bright green button */
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  width: 100%; /* Full-width button for emphasis */
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+form button:hover {
+  background-color: #16a457;
+  transform: scale(1.05); /* Slight hover effect for button */
+}
+
+form button:active {
+  transform: scale(1); /* Active button effect */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  #contact {
+    padding: 30px 15px;
+  }
+
+  #contact h2 {
+    font-size: 2rem;
+  }
+
+  form {
+    padding: 25px 15px;
+  }
+
+  form input,
+  form textarea {
+    padding: 10px;
+  }
+
+  form button {
+    font-size: 1rem;
+  }
+}
+/* About Section */
+.about {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  background-color: #f1fdf7; /* Light background like features section */
+  padding: 100px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.about .container {
+  padding: 0;
+  margin: 0;
+  width: 1400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.about h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  font-weight: 500;
+  color: #333; /* Dark text color */
+}
+
+.about p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: gray;
+  text-align: center;
+  margin: 0 auto;
+  font-weight: 300;
+}
+
+.about img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-top: 20px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.about .cta-button {
+  margin-top: 30px;
+  background: #1dbf73;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.about .cta-button:hover {
+  background: #0d084d;
+}
+
+
+#random, #mission, #home{
+  height: 50px;
+}

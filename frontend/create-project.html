@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create Portfolio</title>
+    <link rel="stylesheet" href="create-project.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header>
+      <div class="container">
+        <h1>Create a New Project</h1>
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="create-profile.html">Create Profile</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Portfolio Creation Form -->
+    <main>
+      <section class="portfolio-form">
+        <h2>Portfolio Form</h2>
+        <form id="portfolio-form">
+          <!-- Email -->
+          <label for="email">Email:</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Enter your email"
+            required
+          />
+
+          <!-- Project Title -->
+          <label for="title">Project Title:</label>
+          <input
+            type="text"
+            id="title"
+            name="title"
+            placeholder="Enter project title"
+            required
+          />
+
+          <!-- Description -->
+          <label for="description">Description:</label>
+          <textarea
+            id="description"
+            name="description"
+            placeholder="Provide a brief description of your project"
+            required
+          ></textarea>
+
+          <!-- Technologies -->
+          <label for="technologies">Technologies (comma-separated):</label>
+          <input
+            type="text"
+            id="technologies"
+            name="technologies"
+            placeholder="E.g., React, Node.js, MongoDB"
+            required
+          />
+
+          <!-- Advantages -->
+          <label for="advantages">Advantages:</label>
+          <textarea
+            id="advantages"
+            name="advantages"
+            placeholder="Highlight key advantages or unique aspects of this project"
+            required
+          ></textarea>
+
+          <!-- Project Link -->
+          <label for="link">Project Link:</label>
+          <input
+            type="url"
+            id="link"
+            name="link"
+            placeholder="Enter project URL (if applicable)"
+            required
+          />
+
+          <button type="submit">Create Portfolio</button>
+        </form>
+      </section>
+    </main>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+      <h2>Contact Me</h2>
+      <form id="contact-form">
+        <input type="text" id="name" placeholder="Your Name" required />
+        <input type="email" id="email" placeholder="Your Email" required />
+        <textarea id="message" placeholder="Your Message" required></textarea>
+        <button type="submit">Send</button>
+      </form>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+      <div class="container">
+        <h2>About Us</h2>
+        <p>
+          At Freelancer Portfolio, we connect talented professionals with
+          clients looking for quality work. Whether you're a designer,
+          developer, or marketing expert, our platform empowers you to showcase
+          your skills, build your network, and take on exciting projects.
+        </p>
+        <p>
+          Our mission is to simplify the freelancing process, offering tools for
+          freelancers to thrive in their careers. We prioritize quality,
+          transparency, and seamless collaboration.
+        </p>
+        <p>
+          Join us today and explore opportunities that match your talent and
+          ambition.
+        </p>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <p>© 2024 Portfolio App. All rights reserved.</p>
+    </footer>
+
+    <script src="create-project.js"></script>
+  </body>
+</html>
