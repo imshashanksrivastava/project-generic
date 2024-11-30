@@ -1,36 +1,28 @@
-// Get email from URL parameters
+// Get email and userEmail from URL parameters
 const params = new URLSearchParams(window.location.search);
 const email = params.get("email");
-const userEmail = params.get("userEmail"); // logged-in user email
+const userEmail = params.get("userEmail"); // Logged-in user's email
 
 // Validate if both email and userEmail are provided
 if (email && userEmail) {
   console.log(`Viewing profile for: ${email}`);
   console.log(`Logged in as: ${userEmail}`);
 
-  // Fetching portfolio data based on the email
+  // Fetch portfolio data
   fetch(
     `http://localhost:5000/api/portfolio?email=${encodeURIComponent(email)}`
   )
     .then((response) => response.json())
     .then((data) => {
       if (data) {
-        // Display profile information
-        if (data.profile) {
-          updateProfileSection(data.profile);
-        }
-
-        // Display projects if available
-        if (data.projects && data.projects.length > 0) {
+        // Display profile, projects, and testimonials if available
+        if (data.profile) updateProfileSection(data.profile);
+        if (data.projects && data.projects.length > 0)
           displayProjects(data.projects);
-        }
-
-        // Display testimonials with ratings if available
-        if (data.testimonials && data.testimonials.length > 0) {
+        if (data.testimonials && data.testimonials.length > 0)
           displayTestimonials(data.testimonials);
-        }
       } else {
-        console.error("No data found for the provided email");
+        console.error("No data found for the provided email.");
       }
     })
     .catch((error) => console.error("Error fetching portfolio data:", error));
@@ -38,9 +30,10 @@ if (email && userEmail) {
   console.error("Required email parameters are missing.");
 }
 
-// Update the profile section with name, expertise, and bio
+// Update profile section with name, expertise, and bio
 function updateProfileSection(profile) {
-  document.getElementById("profile-name").textContent = profile.name;
+  document.getElementById("profile-name").textContent =
+    profile.name || "Name not provided";
 
   const expertiseText = profile.expertise
     ? profile.expertise.join(", ")
@@ -50,31 +43,30 @@ function updateProfileSection(profile) {
   const bioText = profile.bio || "No bio available";
   document.getElementById("about-bio").textContent = bioText;
 
-  document.getElementById("about-email").textContent = email;
+  document.getElementById("about-email").textContent =
+    email || "Email not available";
 }
 
-// Display portfolio projects dynamically
+// Display projects dynamically
 function displayProjects(projects) {
   const projectsHTML = projects
     .map(
       (project) => `
-    <div class="portfolio-item">
-      <img src="https://via.placeholder.com/300" alt="${project.title}" />
-      <h3>${project.title}</h3>
-      <p>${project.description}</p>
-      <a href="${project.link}" target="_blank" class="view-btn">Project Link</a>
-    </div>
-  `
+      <div class="portfolio-item">
+        <img src="https://via.placeholder.com/300" alt="${project.title}" />
+        <h3>${project.title}</h3>
+        <p>${project.description}</p>
+        <a href="${project.link}" target="_blank" class="view-btn">View Project</a>
+      </div>
+    `
     )
-    .join(""); // Combine all project items into a single string
+    .join("");
 
   document.getElementById("portfolio-container").innerHTML += `
     <section id="portfolio">
       <div class="container">
         <h2>My Portfolio</h2>
-        <div class="portfolio-grid">
-          ${projectsHTML} <!-- Insert all project cards here -->
-        </div>
+        <div class="portfolio-grid">${projectsHTML}</div>
       </div>
     </section>
   `;
@@ -86,9 +78,8 @@ function displayTestimonials(testimonials) {
     ? (
         testimonials.reduce((sum, t) => sum + t.rating, 0) / testimonials.length
       ).toFixed(1)
-    : 0; // Default to 0 if no testimonials are available
+    : 0;
 
-  // Update the hero section with average rating
   document.getElementById(
     "avg-rating-hero"
   ).textContent = `Average Rating: ${avgRating} / 5`;
@@ -96,11 +87,12 @@ function displayTestimonials(testimonials) {
   const testimonialsHTML = testimonials
     .map(
       (testimonial) => `
-    <div class="testimonial">
-      <p>"${testimonial.content}"</p>
-      <p><strong>- ${testimonial.author}</strong></p>
-      <p>Rating: ${"★".repeat(testimonial.rating)}</p>
-    </div>`
+      <div class="testimonial">
+        <p>"${testimonial.content}"</p>
+        <p><strong>- ${testimonial.author}</strong></p>
+        <p>Rating: ${"★".repeat(testimonial.rating)}</p>
+      </div>
+    `
     )
     .join("");
 
@@ -109,9 +101,7 @@ function displayTestimonials(testimonials) {
       <div class="container">
         <h2>Testimonials</h2>
         <p>Average Rating: ${avgRating} / 5</p>
-        <div class="testimonial-carousel">
-          ${testimonialsHTML}
-        </div>
+        <div class="testimonial-carousel">${testimonialsHTML}</div>
       </div>
     </section>
   `;
@@ -119,24 +109,22 @@ function displayTestimonials(testimonials) {
 
 // Handle contact form submission
 document.getElementById("contactForm").addEventListener("submit", (e) => {
-  e.preventDefault(); // Prevent form from reloading the page
+  e.preventDefault();
 
   const name = document.getElementById("name").value;
-  const email = document.getElementById("email").value;
+  const contactEmail = document.getElementById("email").value;
   const message = document.getElementById("message").value;
 
   fetch("http://localhost:5000/api/feedback", {
     method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({ name, email, message }),
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ name, email: contactEmail, message }),
   })
     .then((response) => response.json())
     .then((data) => {
       if (data.message) {
-        alert(data.message); // Show success message
-        document.getElementById("contactForm").reset(); // Clear the form
+        alert(data.message);
+        document.getElementById("contactForm").reset();
       } else {
         alert("Error submitting feedback.");
       }
@@ -151,23 +139,14 @@ document.getElementById("contactForm").addEventListener("submit", (e) => {
 document.getElementById("profileEmail").value = email;
 
 // Handle testimonial form submission
-// Handle testimonial form submission
 document.getElementById("testimonialForm").addEventListener("submit", (e) => {
-  e.preventDefault(); // Prevent form submission
+  e.preventDefault();
 
   const profileEmail = document.getElementById("profileEmail").value;
   const author = document.getElementById("author").value;
-  const rating = document.getElementById("rating").value;
+  const rating = parseInt(document.getElementById("rating").value, 10);
   const content = document.getElementById("content").value;
 
-  // Calculate average rating (if required)
-  const avgRating = testimonials.length
-    ? (
-        testimonials.reduce((sum, t) => sum + t.rating, 0) / testimonials.length
-      ).toFixed(1)
-    : 0;
-
-  // Send testimonial and avgRating to server
   fetch("http://localhost:5000/api/testimonials", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
@@ -177,13 +156,12 @@ document.getElementById("testimonialForm").addEventListener("submit", (e) => {
       content,
       author,
       rating,
-      avgRating, // Send avgRating to server
     }),
   })
     .then((response) => response.json())
     .then((data) => {
       if (data.message) {
-        alert(data.message); // Success
+        alert(data.message);
         document.getElementById("testimonialForm").reset();
       } else {
         alert("Error submitting testimonial.");
